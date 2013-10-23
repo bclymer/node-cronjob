@@ -1,6 +1,6 @@
 {
   "name": "node-cronjob",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Cron-job like task scheduler for anonymous functions",
   "main": "cronjob.js",
   "scripts": {

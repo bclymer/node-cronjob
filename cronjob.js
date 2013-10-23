@@ -20,7 +20,7 @@ function schedule (owner, cronString, code) {
 			if (cronTime.dayOfWeek != "*" && now.getDay() != cronTime.dayOfWeek) return false;
 			if (cronTime.hour != "*" && now.getHours() != cronTime.hour) return false;
 			if (cronTime.minute != "*" && now.getMinutes() != cronTime.minute) return false;
-			if (lastRun.getMinutes() == now.getMinutes() && now.getTime() - lastRun.getTime() < 60) return false; // got called twice in a minute.
+			if (lastRun.getMinutes() == now.getMinutes() && now.getTime() - lastRun.getTime() < 60 * 1000) return false; // got called twice in a minute.
 			return true;
 		},
 		code: code,
